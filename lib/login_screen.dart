@@ -61,7 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         child: Scaffold(
           key: _scaffoldKey,
-          appBar: AppBar(),
+          appBar: AppBar(
+            title: Text('title'),
+          ),
           body: Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -128,7 +130,21 @@ class _MyHomePageState extends State<MyHomePage> {
                             password: passwordController.text));
                       },
                     ),
-                  )
+                  ),
+                  TextField(
+                    controller: emailController,
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 20),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.blue, width: 1.0),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(100.0)),
+                        borderSide: BorderSide(color: Colors.black, width: 1.0),
+                      ),
+                      labelText: 'Email',
+                    ),
+                  ),
                 ],
               ),
             ),
